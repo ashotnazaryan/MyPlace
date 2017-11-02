@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';  //example import only button module
+import { MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatRadioModule } from '@angular/material';
 
 import 'hammerjs';
 
@@ -15,10 +15,12 @@ import { AppComponent } from './app.component';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        MatButtonModule,
-        MatCheckboxModule
+        MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatRadioModule
     ],
     providers: [],
     bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule { 
+
+}

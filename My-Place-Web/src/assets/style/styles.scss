@@ -1,8 +1,25 @@
 //@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 @import './variables.scss';
-@import './theme/custom-theme.scss';
+@import './theme/theme.scss';
 
-body {
-    background-color: $white;
+html {
+    height: 100%;
+    body {
+        background-color: $white;
+        height: 100%;
+        margin: 0;
+    
+        .btn-lg {
+            line-height: $btn-lg;
+        }
+        .btn-md {
+            line-height: $btn-md;
+        }
+        .btn-sm {
+            line-height: $btn-sm;
+        }           
+    }
 }
+
+

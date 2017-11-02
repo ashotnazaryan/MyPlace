@@ -1,33 +1,13 @@
-//@import '~@angular/material/theming';
-//@import '../assets/style/theme/country-theme.scss';
 @import '../assets/style/variables.scss';   //also imports custom theme colors
+@import '../assets/style/mixins.scss';
 
-@mixin country-checkbox($country) {
-    // Extract whichever individual palettes you need from the theme.
-    $primary: map-get($country, country-primary);
-    $accent: map-get($country, country-accent);
-    $warn: map-get($country, country-warn);
-  
-    // Use mat-color to extract individual colors from a palette as necessary.
-        // .mat-checkbox-indeterminate, .mat-checkbox-checked {
-        //     &.mat-primary .mat-checkbox-background {
-        //         background-color: mat-color($country-primary);
-        //     }
-        
-        //     &.mat-accent .mat-checkbox-background {
-        //         background-color: mat-color($country-accent);
-        //     }
-        
-        //     &.mat-warn .mat-checkbox-background {
-        //         background-color: mat-color($country-warn);
-        //     }
-        // }
-}
+@include mat-menu-theme($country);  //includes custom mat-menu
 
 app-root {
     display: block; 
-    //@include country-checkbox($country-primary);
+    height: 100%;
     .a {
         background-color: mat-color($country-accent);
     }
 }
+

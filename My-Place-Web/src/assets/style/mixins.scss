@@ -1,0 +1,23 @@
+@mixin mat-menu-theme($theme) {
+    
+    $primary: mat-color($country-primary);
+
+    .mat-menu-panel {
+        background: $primary;
+        .mat-menu-content {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    
+    .mat-menu-item {
+        background: transparent;
+        color: $white;
+    }
+    
+    .mat-menu-item .mat-icon,
+    .mat-menu-item-submenu-trigger::after {
+        color: $white;
+    }
+        
+}

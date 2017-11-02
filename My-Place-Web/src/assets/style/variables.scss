@@ -1,4 +1,16 @@
-@import './theme/custom-theme.scss';
+@import './theme/theme.scss';
 
+
+//colors
 $white: #fefefe;
 $black: #242424;
+
+//buttons
+$btn-lg: 48px;
+$btn-md: 36px;
+$btn-sm: 30px;
+
+//resolutions
+$desktop: 1280px;
+$tablet: 1024px;
+$phone: 768px;
