@@ -9,23 +9,29 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 })
 
 export class AppComponent implements OnInit {
-    color: string;
+
     themes: any[] = [
-        {id: '1', value: 'Light'},
-        {id: '2', value: 'Dark'}
+        { key: 'ua-theme', value: 'UA' },
+        { key: 'am-theme', value: 'AM' }
     ];
 
-    constructor(overlayContainer: OverlayContainer) {
-        // overlayContainer.getContainerElement().classList.add('dark');
+    selectedTheme: string = 'ua-theme';
+
+    constructor(private overlayContainer: OverlayContainer) {
+        overlayContainer.getContainerElement().classList.add('ua-theme');
     }
 
     ngOnInit() {
 
     }
 
-    changeTheme(color) {
-        //debugger
-        this.color = color;
+    changeTheme(theme) {
+        if(theme.value === "UA") {
+            this.selectedTheme = "ua-theme";
+        }
+        else if(theme.value === "AM") {
+            this.selectedTheme = "am-theme";
+        }
     }
 
 }   

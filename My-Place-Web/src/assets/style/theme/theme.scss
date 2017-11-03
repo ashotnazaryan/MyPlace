@@ -13,7 +13,7 @@
 
 
 
-$country-blue: (
+$blue: (
     50: #e1f5fe,
     100: #b3e5fc,
     200: #81d4fa,
@@ -46,7 +46,7 @@ $country-blue: (
     )
 );
 
-$country-yellow: (
+$yellow: (
     50: #fffde7,
     100: #fff9c4,
     200: #fff59d,
@@ -79,7 +79,7 @@ $country-yellow: (
     )
 );
 
-$country-orange: (
+$orange: (
     50: #fbe9e7,
     100: #ffccbc,
     200: #ffab91,
@@ -112,10 +112,63 @@ $country-orange: (
     )
 );
 
-$country-primary: mat-palette($country-blue, 700);
-$country-accent:  mat-palette($country-yellow, 400);
-$country-warn: mat-palette($country-orange, 500);
+$red: (
+    50: #ffebee,
+    100: #ffcdd2,
+    200: #ef9a9a,
+    300: #e57373,
+    400: #ef5350,
+    500: #f44336,
+    600: #e53935,
+    700: #d32f2f,
+    800: #c62828,
+    900: #b71c1c,
+    A100: #ff8a80,
+    A200: #ff5252,
+    A400: #ff1744,
+    A700: #d50000,
+    contrast: (
+      50: $black-87-opacity,
+      100: $black-87-opacity,
+      200: $black-87-opacity,
+      300: $black-87-opacity,
+      400: $black-87-opacity,
+      500: white,
+      600: white,
+      700: white,
+      800: $white-87-opacity,
+      900: $white-87-opacity,
+      A100: $black-87-opacity,
+      A200: white,
+      A400: white,
+      A700: white,
+    )
+);
 
-$country: mat-light-theme($country-primary, $country-accent, $country-warn);
+//ua theme
+$ua-primary: mat-palette($blue, 700);
+$ua-accent:  mat-palette($yellow, 400);
+$ua-warn: mat-palette($orange, 500);
+$ua: mat-light-theme($ua-primary, $ua-accent, $ua-warn);
 
-@include angular-material-theme($country);
+@include angular-material-theme($ua);
+
+.ua-theme {
+    @include angular-material-theme($ua);
+}
+
+
+//am theme
+$am-primary: mat-palette($red, A700);
+$am-accent:  mat-palette($blue, 700);
+$am-warn: mat-palette($orange, 400);
+$am: mat-light-theme($am-primary, $am-accent, $am-warn);
+
+.am-theme {
+    @include angular-material-theme($am);
+}
+
+
+
+
+

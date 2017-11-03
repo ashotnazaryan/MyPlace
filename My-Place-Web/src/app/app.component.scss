@@ -1,13 +1,8 @@
 @import '../assets/style/variables.scss';   //also imports custom theme colors
 @import '../assets/style/mixins.scss';
 
-@include mat-menu-theme($country);  //includes custom mat-menu
-
 app-root {
     display: block; 
     height: 100%;
-    .a {
-        background-color: mat-color($country-accent);
-    }
 }
 
