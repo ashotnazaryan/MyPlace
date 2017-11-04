@@ -7,10 +7,12 @@ import { MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatRa
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './shared/components/header/header.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent
     ],
     imports: [
         BrowserModule,
