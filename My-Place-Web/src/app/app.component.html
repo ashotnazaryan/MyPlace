@@ -1,17 +1,15 @@
-<div [ngClass]="{'ua-theme': selectedTheme === 'ua-theme', 'am-theme': selectedTheme === 'am-theme'}">
+<div [ngClass]="{'en-theme': selectedTheme.key === 'en-theme', 'ua-theme': selectedTheme.key === 'ua-theme', 'am-theme': selectedTheme.key === 'am-theme'}">
 
     <div class="a">Test</div>
 
     <button mat-raised-button color="primary" class="btn-lg">Primary</button>
     <button mat-raised-button color="accent" class="btn-md">Accent</button>
-    <button mat-raised-button color="warn" class="btn-sm">Warning</button>
 
     <button mat-button color="primary">Primary</button>
     <button mat-button color="accent">Accent</button>
-    <button mat-button color="warn">Warning</button>
 
     <button mat-fab color="primary">Primary</button>
-    <button mat-icon-button color="warn">
+    <button mat-icon-button color="primary">
         <mat-icon>edit</mat-icon>
     </button>
 
@@ -69,11 +67,21 @@
         <mat-radio-button color="primary" value="2">Radio 2</mat-radio-button>
     </mat-radio-group>
 
-    <mat-form-field>
-        <mat-select placeholder="Theme" (change)="changeTheme($event)">
-            <mat-option *ngFor="let theme of themes" [value]="theme.value">
-                {{ theme.value }}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
+    <div>
+        <mat-form-field>
+          <input matInput placeholder="Input">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <textarea matInput placeholder="Textarea"></textarea>
+        </mat-form-field>
+      
+        <mat-form-field>
+            <mat-select placeholder="Theme" (change)="changeTheme($event)">
+                <mat-option *ngFor="let theme of themes" [value]="theme?.value">
+                    {{ theme?.value }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+      </div>
 </div>

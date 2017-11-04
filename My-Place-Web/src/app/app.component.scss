@@ -1,6 +1,9 @@
 @import '../assets/style/variables.scss';   //also imports custom theme colors
 @import '../assets/style/mixins.scss';
 
+// @include mat-menu-theme($ua);
+// @include mat-select-theme($ua);
+
 app-root {
     display: block; 
     height: 100%;
