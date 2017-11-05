@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation, OnInit, EventEmitter, Output } from '@angular/core';
+import 'rxjs/Rx';
 
 @Component({
     selector: 'header',
@@ -30,6 +31,7 @@ export class HeaderComponent implements OnInit {
         //issue ERROR TypeError: Cannot read property 'nativeElement' of undefined
         //Should be fixed in master by #7729.
         this.selectedTheme = this.themes.find(item => item.value === event.value );
+        this.onLanguageChanged.emit(this.selectedTheme);
     }
 
 }   

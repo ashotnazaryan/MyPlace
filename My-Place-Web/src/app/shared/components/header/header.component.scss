@@ -1,8 +1,18 @@
 header {
     display: block;
     .header-container {
-        height: 100px;
-        width: inherit;
-        // background: url("../../../assets/image/main.jpg") no-repeat fixed center; 
+        
+        overflow: hidden;
+        position: relative; /* applied for parent div */
+        .header-image {
+            width:100%;
+            max-height: 300px;
+            img {
+                width: 100%;
+            }
+        }
+        .language {
+            
+        }
     }
 }

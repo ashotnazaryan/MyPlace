@@ -1,5 +1,7 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs';
 
 @Component({
     selector: 'app-root',
@@ -10,8 +12,17 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 
 export class AppComponent implements OnInit {
 
+    selectedTheme: any;
+    languageChangedEvent: Observable<any>;
+    private subject = new Subject();
+    
     constructor(private overlayContainer: OverlayContainer) {
         // overlayContainer.getContainerElement().classList.add('en-theme');
+
+        this.languageChangedEvent = this.subject.asObservable();
+        this.languageChangedEvent.subscribe((event) => {
+            this.selectedTheme = event;
+        });
     }
 
     ngOnInit() {
@@ -19,7 +30,7 @@ export class AppComponent implements OnInit {
     }
 
     languageChanged(event) {
-        debugger
+        this.subject.next(event);
     }
     
 }   
