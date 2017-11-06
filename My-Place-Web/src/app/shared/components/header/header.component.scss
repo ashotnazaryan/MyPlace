@@ -1,9 +1,8 @@
 header {
     display: block;
-    .header-container {
-        
+    .header-container {     
         overflow: hidden;
-        position: relative; /* applied for parent div */
+        position: relative;
         .header-image {
             width:100%;
             max-height: 300px;

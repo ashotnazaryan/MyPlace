@@ -4,6 +4,8 @@
 
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
 
     .mat-menu-panel {
         background: $primary;
@@ -29,6 +31,8 @@
 
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
   
     .mat-select-content, .mat-select-panel-done-animating {
         background: $white;

@@ -134,41 +134,15 @@ $red: (
     )
 );
 
-//en theme
-$theme-name: 'en-theme';
-$en-primary: mat-palette($blue, 900);
-$en-accent: mat-palette($red, A700); 
-$en-warn: mat-palette($orange, 500);
-$en: mat-light-theme($en-primary, $en-accent, $en-warn);
 
-@include angular-material-theme($en);
-.en-theme {
-    @include angular-material-theme($en);
-}
-
-//ua theme
-$theme-name: 'ua-theme';
-$ua-primary: mat-palette($yellow, 700);
-$ua-accent:  mat-palette($blue, 500);
-$ua-warn: mat-palette($orange, 500);
-$ua: mat-light-theme($ua-primary, $ua-accent, $ua-warn);
-
-.ua-theme {
-    @include angular-material-theme($ua);
-}
-
-//am theme
-$theme-name: 'am-theme';
 $am-primary: mat-palette($red, A700);
 $am-accent:  mat-palette($blue, 900);
 $am-warn: mat-palette($orange, 500);
+$background: red;
+$foreground: blue;
+
 $am: mat-light-theme($am-primary, $am-accent, $am-warn);
 
-.am-theme {
+.am {
     @include angular-material-theme($am);
 }
-
-
-
-
-

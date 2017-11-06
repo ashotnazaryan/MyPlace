@@ -11,9 +11,9 @@ import 'rxjs/Rx';
 export class HeaderComponent implements OnInit {
 
     themes: any[] = [
-        { key: 'en-theme', value: 'EN' },
-        { key: 'ua-theme', value: 'UA' },
-        { key: 'am-theme', value: 'AM' }
+        { key: 'en', value: 'EN' },
+        { key: 'ua', value: 'UA' },
+        { key: 'am', value: 'AM' }
     ];
     selectedTheme: any = this.themes[0];
 

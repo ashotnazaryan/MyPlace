@@ -12,17 +12,21 @@ import { Subject } from 'rxjs';
 
 export class AppComponent implements OnInit {
 
-    selectedTheme: any;
+    selectedTheme: any = { key: 'en', value: 'EN' };
     languageChangedEvent: Observable<any>;
     private subject = new Subject();
     
     constructor(private overlayContainer: OverlayContainer) {
-        // overlayContainer.getContainerElement().classList.add('en-theme');
-
+        
+        let classList: any = overlayContainer.getContainerElement().classList;
+        classList.add(this.selectedTheme.key);
         this.languageChangedEvent = this.subject.asObservable();
-        this.languageChangedEvent.subscribe((event) => {
+        this.languageChangedEvent.subscribe((event) => {          
+            classList.add(event.key);
+            classList.remove(this.selectedTheme.key);
             this.selectedTheme = event;
         });
+        
     }
 
     ngOnInit() {

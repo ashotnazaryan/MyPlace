@@ -1,15 +1,15 @@
-@import '../assets/style/variables.scss';   //also imports custom theme colors
-@import '../assets/style/mixins.scss';
+// @import '../assets/style/_theme';
+@import '../assets/style/variables';
+@import '../assets/style/mixins';
 
-// @include mat-menu-theme($theme);
-// @include mat-select-theme($theme);
+// @include mat-menu-theme($en);
+// @include mat-select-theme($en);
 
-app-root {
+app-root {    
     display: block; 
     height: 100%;
     .main-container {
         min-height: 100%;
-        background-color: mat-color($ua-primary);
     }
 }
 
