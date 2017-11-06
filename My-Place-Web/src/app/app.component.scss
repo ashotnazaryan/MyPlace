@@ -1,9 +1,9 @@
 // @import '../assets/style/_theme';
 @import '../assets/style/variables';
-@import '../assets/style/mixins';
+// @import '../assets/style/mixins';
 
-// @include mat-menu-theme($en);
-// @include mat-select-theme($en);
+// @include mat-menu-theme($en-primary);
+// @include mat-select-theme($en-primary);
 
 app-root {    
     display: block; 
