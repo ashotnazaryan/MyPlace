@@ -1,15 +1,14 @@
 // @import '../assets/style/_theme';
-@import '../assets/style/variables';
+//@import '../assets/style/variables';
 // @import '../assets/style/mixins';
-
-// @include mat-menu-theme($en-primary);
-// @include mat-select-theme($en-primary);
 
 app-root {    
     display: block; 
     height: 100%;
-    .main-container {
-        min-height: 100%;
+    .app-container {
+        height: 100%;
+        display: flex;
+        flex-flow: column;
     }
 }
 

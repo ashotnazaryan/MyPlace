@@ -11,9 +11,9 @@ import 'rxjs/Rx';
 export class HeaderComponent implements OnInit {
 
     themes: any[] = [
-        { key: 'en', value: 'EN' },
-        { key: 'ua', value: 'UA' },
-        { key: 'am', value: 'AM' }
+        { key: 'en-theme', value: 'EN' },
+        { key: 'ua-theme', value: 'UA' },
+        { key: 'am-theme', value: 'AM' }
     ];
     selectedTheme: any = this.themes[0];
 
@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
 
     changeTheme(event) {
         //issue ERROR TypeError: Cannot read property 'nativeElement' of undefined
-        //Should be fixed in master by #7729.
+        //Should be fixed in master by #7729. (if angular 5.0.0)
         this.selectedTheme = this.themes.find(item => item.value === event.value );
         this.onLanguageChanged.emit(this.selectedTheme);
     }

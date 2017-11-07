@@ -4,8 +4,8 @@
 
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
-    $background: map-get($theme, background);
     $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
 
     .mat-menu-panel {
         background: $primary;
@@ -15,14 +15,14 @@
         }
     }
     .mat-menu-item {
-        background: $accent;
-        color: $black; 
+        background: mat-color($background, card);
+        color: mat-color($foreground, text);
         &:hover:not([disabled]) {
-            background: $primary;
-            color: $white;
+            background: mat-color($background, card);
+            color: mat-color($foreground, text);
         }
         &.mat-menu-item-highlighted {
-            color: $white;
+            color: mat-color($foreground, text);
         }
     }
 }
@@ -31,22 +31,22 @@
 
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
-    $background: map-get($theme, background);
     $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
   
     .mat-select-content, .mat-select-panel-done-animating {
-        background: $white;
+        background-color: mat-color($background, card);
     }
     .mat-select-panel {
         .mat-option.mat-selected:not(.mat-option-multiple) {
-          background: $primary;
-          color: $white;
+            background-color: mat-color($background, card);
+            color: mat-color($foreground, text);
         }
         .mat-option {
-            background: $accent;
+            background-color: mat-color($background, card);
             &:hover:not(.mat-option-disabled) {
-                background: $primary;
-                color: $white;
+                background-color: mat-color($background, card);
+                color: mat-color($foreground, text);
             }
         }
     }

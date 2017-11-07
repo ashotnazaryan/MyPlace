@@ -12,7 +12,7 @@ import { Subject } from 'rxjs';
 
 export class AppComponent implements OnInit {
 
-    selectedTheme: any = { key: 'en', value: 'EN' };
+    selectedTheme: any = { key: 'en-theme', value: 'EN' };
     languageChangedEvent: Observable<any>;
     private subject = new Subject();
     

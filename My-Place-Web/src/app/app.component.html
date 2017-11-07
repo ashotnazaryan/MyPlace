@@ -1,4 +1,5 @@
-<div class="main-container" [ngClass]="{'en': selectedTheme?.key === 'en', 'ua': selectedTheme?.key === 'ua', 'am': selectedTheme?.key === 'am'}">
+<div class="app-container" [ngClass]="{'en-theme': selectedTheme?.key === 'en-theme', 'ua-theme': selectedTheme?.key === 'ua-theme', 'am-theme': selectedTheme?.key === 'am-theme'}">
     <header (onLanguageChanged)="languageChanged($event)"></header>
-    <button mat-raised-button color="primary">Primary</button>
+    <content></content>
+    <footer></footer>
 </div>

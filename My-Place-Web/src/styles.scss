@@ -1,0 +1,62 @@
+@import './assets/style/variables.scss';
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+@import './assets/style/themes/en-theme.scss';
+@import './assets/style/themes/ua-theme.scss';
+@import './assets/style/themes/am-theme.scss';
+
+@import './app/app-theme.component.scss'; 
+@import './app/shared/components/header/header-theme.component.scss'; 
+@import './app/shared/components/footer/footer-theme.component.scss';
+@import './app/shared/components/content/content-theme.component.scss';
+
+// @import './assets/style/mixins.scss';   //module build failed, undefined ...palette...
+
+@mixin custom-theme($theme) {
+    @include mat-menu-theme($theme);
+    @include mat-select-theme($theme);
+
+    @include app-theme-component($theme);
+    @include header-theme-component($theme);
+    @include content-theme-component($theme);
+    @include footer-theme-component($theme);    
+}
+
+@include angular-material-theme($en-theme);  //for angular material core theme
+.en-theme {
+    @include angular-material-theme($en-theme);
+    @include custom-theme($en-theme);
+}
+.ua-theme {
+    @include angular-material-theme($ua-theme);
+    @include custom-theme($ua-theme);
+}
+.am-theme {
+    @include angular-material-theme($am-theme);
+    @include custom-theme($am-theme);
+}
+
+
+html {
+    height: 100%;
+    body {
+        background-color: $white;
+        height: 100%;
+        margin: 0;
+    
+        .btn-lg {
+            line-height: $btn-lg;
+        }
+        .btn-md {
+            line-height: $btn-md;
+        }
+        .btn-sm {
+            line-height: $btn-sm;
+        }           
+    }
+}
+
+
