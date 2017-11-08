@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs';
+import { Subject } from 'rxjs/Subject';  //if import from 'rxjs' than more 2.7 MB in vendor.js
 
 @Component({
     selector: 'app-root',
