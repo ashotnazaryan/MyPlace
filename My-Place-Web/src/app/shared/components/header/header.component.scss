@@ -1,18 +1,27 @@
+@import '../../../../assets/style/variables';
+
 header {
     display: block;
-    height: 100px;
-    border-bottom: 1px solid;
+    background-color: $white;
     .header-container {     
-        overflow: hidden;
-        position: relative;
-        .header-image {
-            width: 100%;
-            img {
-                width: 100%;
-            }
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        .logo {
+            width: 100px;
+        }
+        .menu {
+            flex-grow: 1;
         }
         .language {
-            
+            .mat-icon-button {
+                width: 50px;
+            }
         }
     }
+}
+
+.mat-menu-panel {
+    min-width: 80px !important;
 }

@@ -27,10 +27,8 @@ export class HeaderComponent implements OnInit {
 
     }
 
-    changeTheme(event) {
-        //issue ERROR TypeError: Cannot read property 'nativeElement' of undefined
-        //Should be fixed in master by #7729. (if angular 5.0.0)
-        this.selectedTheme = this.themes.find(item => item.value === event.value );
+    changeTheme(theme) {
+        this.selectedTheme = this.themes.find(item => item.value === theme.value );
         this.onLanguageChanged.emit(this.selectedTheme);
     }
 

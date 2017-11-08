@@ -1,21 +1,30 @@
-<div class="header-container">
-    <div class="header-image">
+<div class="header-container vertical-center">
+    <div class="logo">
         <!-- <img src="/assets/image/main-2.png" /> -->
-    </div>
-    <div class="language">
-        <mat-form-field>
-            <mat-select placeholder="Theme" (change)="changeTheme($event)">
-                <mat-option *ngFor="let theme of themes" [value]="theme?.value">
-                    {{ theme?.value }}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
+        <a href="#">LOGO</a>
     </div>
     <div class="menu">
-        <button mat-raised-button color="accent" [matMenuTriggerFor]="menu">Menu</button>
-        <mat-menu #menu="matMenu" [overlapTrigger]="false">
+        <button mat-button color="primary" [matMenuTriggerFor]="menu1">Menu-1</button>
+        <mat-menu #menu1="matMenu" [overlapTrigger]="false">
             <button mat-menu-item>Item 1</button>
             <button mat-menu-item>Item 2</button>
+        </mat-menu>
+        <button mat-button color="primary" [matMenuTriggerFor]="menu2">Menu-2</button>
+        <mat-menu #menu2="matMenu" [overlapTrigger]="false">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+            <button mat-menu-item>Item 3</button>
+        </mat-menu>
+    </div>
+    <div class="language">
+        <button mat-icon-button color="primary" [matMenuTriggerFor]="languagemenu">
+            <mat-icon>language</mat-icon>
+            <span>{{selectedTheme.value}}</span>
+        </button>
+        <mat-menu #languagemenu="matMenu" [overlapTrigger]="false">
+            <button mat-menu-item *ngFor="let theme of themes" (click)="changeTheme(theme)">
+                <span>{{ theme?.value }}</span>
+            </button>
         </mat-menu>
     </div>
 </div>

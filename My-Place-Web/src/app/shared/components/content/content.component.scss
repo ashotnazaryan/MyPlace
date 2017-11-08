@@ -1,3 +1,7 @@
+@import '../../../../assets/style/variables';
+
 content {
-    flex: 1;   
+    display: flex;
+    flex: 1;
+    background-color: $background;   
 }

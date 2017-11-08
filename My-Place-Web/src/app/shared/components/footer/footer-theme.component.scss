@@ -10,5 +10,8 @@
 
     footer {
         background-color: mat-color($primary);
+        .footer-container .copyright {
+            color: mat-color($foreground, text);
+        }
     }
 }

@@ -9,6 +9,8 @@
     $foreground: map-get($theme, foreground);
 
     header {
-        border-color: mat-color($primary);
+        .header-container {
+            box-shadow: 1px 1px 1px mat-color($primary);
+        }
     }
 }

@@ -44,19 +44,43 @@ html {
     height: 100%;
     body {
         background-color: $white;
-        height: 100%;
-        margin: 0;
+        height: 100%;      
     
-        .btn-lg {
+        .button-large {
             line-height: $btn-lg;
         }
-        .btn-md {
+        .button-medium {
             line-height: $btn-md;
         }
-        .btn-sm {
+        .button-small {
             line-height: $btn-sm;
-        }           
+        }
+        .vertical-center {
+            display: flex;
+            align-items: center;
+        }
+        .horizontal-center {
+            display: flex;
+            justify-content: center;
+        }
+        .all-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
+}
+
+//reset default styles
+body {
+    margin: 0;
+}
+* {
+    outline: none !important;
+}
+a, a:active {
+    text-decoration: none;
+    color: inherit;
 }
 
 
