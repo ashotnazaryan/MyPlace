@@ -5,13 +5,15 @@
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
     $warn: map-get($theme, warn);
-    $background: map-get($theme, background);
-    $foreground: map-get($theme, foreground);
+    // $background: map-get($theme, background);
+    // $foreground: map-get($theme, foreground);
+    // $is-ua: map-get($theme, is-ua);
 
     footer {
         background-color: mat-color($primary);
         .footer-container .copyright {
-            color: mat-color($foreground, text);
+            // color: mat-color($foreground, text, if($is-ua-theme, 0.8, 0.8));
+            // color: if($is-ua, black, white);
         }
     }
 }

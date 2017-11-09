@@ -1,7 +1,20 @@
 
 $am-primary: mat-palette($mat-red, A700);
-$am-accent:  mat-palette($mat-blue, 900);
+$am-accent: mat-palette($mat-blue, 900);
 $am-warn: mat-palette($mat-orange, 500);
+// $is-am: true;
+
+// @function am-theme($am-primary, $am-accent, $am-warn) {
+//     @return (
+//       primary: $primary,
+//       accent: $accent,
+//       warn: $warn,
+//       is-am: true,
+//       foreground: $mat-light-theme-foreground,
+//       background: $mat-light-theme-background,
+//     );
+// }
 
 $am-theme: mat-light-theme($am-primary, $am-accent, $am-warn);
+
 
