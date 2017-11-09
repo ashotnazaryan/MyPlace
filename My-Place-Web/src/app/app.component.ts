@@ -13,18 +13,26 @@ import { Subject } from 'rxjs/Subject';  //if import from 'rxjs' than more 2.7 M
 export class AppComponent implements OnInit {
 
     selectedTheme: any = { key: 'en-theme', value: 'EN' };
+    menuButtonClicked: boolean = false;
     languageChangedEvent: Observable<any>;
-    private subject = new Subject();
+    menuButtonClickedEvent: Observable<any>;
+    private languageSubject = new Subject();
+    private menuSubject = new Subject();
     
     constructor(private overlayContainer: OverlayContainer) {
-        
         let classList: any = overlayContainer.getContainerElement().classList;
         classList.add(this.selectedTheme.key);
-        this.languageChangedEvent = this.subject.asObservable();
+        this.languageChangedEvent = this.languageSubject.asObservable();
+        this.menuButtonClickedEvent = this.menuSubject.asObservable();
+
         this.languageChangedEvent.subscribe((event) => {          
             classList.add(event.key);
             classList.remove(this.selectedTheme.key);
             this.selectedTheme = event;
+        });
+
+        this.menuButtonClickedEvent.subscribe((event) => {    
+            this.menuButtonClicked = event;
         });
         
     }
@@ -33,8 +41,12 @@ export class AppComponent implements OnInit {
 
     }
 
-    languageChanged(event) {
-        this.subject.next(event);
+    languageChangeHandler(event) {
+        this.languageSubject.next(event);
+    }
+
+    menuButtonClickHandler(event) {
+        this.menuSubject.next(event);
     }
     
 }   

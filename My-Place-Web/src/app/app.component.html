@@ -1,5 +1,6 @@
 <div class="app-container" [ngClass]="{'en-theme': selectedTheme?.key === 'en-theme', 'ua-theme': selectedTheme?.key === 'ua-theme', 'am-theme': selectedTheme?.key === 'am-theme'}">
-    <header (onLanguageChanged)="languageChanged($event)"></header>
+    <header (onLanguageChanged)="languageChangeHandler($event)"></header>
+    <left-menu *ngIf="menuButtonClicked" (onMenuButtonClicked)="menuButtonClickHandler($event)"></left-menu>
     <content></content>
     <footer></footer>
 </div>

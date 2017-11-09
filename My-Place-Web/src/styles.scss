@@ -48,12 +48,15 @@ html {
     
         .button-large {
             line-height: $btn-lg;
+            padding: $btn-lg-pd;
         }
         .button-medium {
             line-height: $btn-md;
+            padding: $btn-md-pd;
         }
         .button-small {
             line-height: $btn-sm;
+            padding: $btn-sm-pd;
         }
         .vertical-center {
             display: flex;

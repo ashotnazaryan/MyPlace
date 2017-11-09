@@ -1,6 +1,8 @@
 <div class="header-container vertical-center">
+    <button mat-icon-button color="primary" (click)="openLeftMenu()">
+        <mat-icon>menu</mat-icon>
+    </button>
     <div class="logo">
-        <!-- <img src="/assets/image/main-2.png" /> -->
         <a href="#">LOGO</a>
     </div>
     <div class="menu">
@@ -21,7 +23,7 @@
             <mat-icon>language</mat-icon>
             <span>{{selectedTheme.value}}</span>
         </button>
-        <mat-menu #languagemenu="matMenu" [overlapTrigger]="false">
+        <mat-menu #languagemenu="matMenu" class="language-menu" [overlapTrigger]="false">
             <button mat-menu-item *ngFor="let theme of themes" (click)="changeTheme(theme)">
                 <span>{{ theme?.value }}</span>
             </button>

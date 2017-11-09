@@ -10,14 +10,16 @@ import 'rxjs/Rx';
 
 export class HeaderComponent implements OnInit {
 
+    @Output() onLanguageChanged: EventEmitter<any> = new EventEmitter();
+    @Output() onMenuButtonClicked: EventEmitter<any> = new EventEmitter();
+
     themes: any[] = [
         { key: 'en-theme', value: 'EN' },
         { key: 'ua-theme', value: 'UA' },
         { key: 'am-theme', value: 'AM' }
     ];
     selectedTheme: any = this.themes[0];
-
-    @Output() onLanguageChanged: EventEmitter<any> = new EventEmitter();
+    menuButtonClicked: boolean = false;
 
     constructor() {
         
@@ -30,6 +32,12 @@ export class HeaderComponent implements OnInit {
     changeTheme(theme) {
         this.selectedTheme = this.themes.find(item => item.value === theme.value );
         this.onLanguageChanged.emit(this.selectedTheme);
+    }
+
+    openLeftMenu() {
+        debugger
+        this.menuButtonClicked = !this.menuButtonClicked;
+        this.onMenuButtonClicked.emit(this.menuButtonClicked);
     }
 
 }   

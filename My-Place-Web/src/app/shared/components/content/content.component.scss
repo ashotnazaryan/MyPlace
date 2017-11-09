@@ -4,4 +4,7 @@ content {
     display: flex;
     flex: 1;
     background-color: $background;   
+    .content-container {
+        width: 100%;
+    }
 }
