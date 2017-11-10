@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
-import 'rxjs/Rx';
 
 @Component({
     selector: 'left-menu',

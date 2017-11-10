@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation, OnInit, EventEmitter, Output } from '@angular/core';
-import 'rxjs/Rx';
 
 @Component({
     selector: 'header',
@@ -35,7 +34,6 @@ export class HeaderComponent implements OnInit {
     }
 
     openLeftMenu() {
-        debugger
         this.menuButtonClicked = !this.menuButtonClicked;
         this.onMenuButtonClicked.emit(this.menuButtonClicked);
     }

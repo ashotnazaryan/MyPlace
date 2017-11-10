@@ -20,8 +20,10 @@ export class AppComponent implements OnInit {
     private menuSubject = new Subject();
     
     constructor(private overlayContainer: OverlayContainer) {
+
         let classList: any = overlayContainer.getContainerElement().classList;
         classList.add(this.selectedTheme.key);
+
         this.languageChangedEvent = this.languageSubject.asObservable();
         this.menuButtonClickedEvent = this.menuSubject.asObservable();
 
