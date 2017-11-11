@@ -9,6 +9,7 @@
 @import './assets/style/themes/am-theme.scss';
 
 @import './app/app-theme.component.scss'; 
+@import './app/shared/components/left-menu/left-menu-theme.component.scss';
 @import './app/shared/components/header/header-theme.component.scss'; 
 @import './app/shared/components/footer/footer-theme.component.scss';
 @import './app/shared/components/content/content-theme.component.scss';
@@ -16,10 +17,11 @@
 // @import './assets/style/mixins.scss';   //module build failed, undefined ...palette...
 
 @mixin custom-theme($theme) {
-    @include mat-menu-theme($theme);
-    @include mat-select-theme($theme);
+    @include mat-menu-theme($theme); //not works yet
+    @include mat-select-theme($theme);  //not works yet
 
     @include app-theme-component($theme);
+    @include left-menu-theme-component($theme);
     @include header-theme-component($theme);
     @include content-theme-component($theme);
     @include footer-theme-component($theme);    

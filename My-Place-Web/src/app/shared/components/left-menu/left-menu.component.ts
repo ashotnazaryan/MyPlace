@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'left-menu',
@@ -9,11 +9,20 @@ import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 
 export class LeftMenuComponent implements OnInit {
 
+    @Output() onCloseButtonClicked: EventEmitter<any> = new EventEmitter();
+
+    closeButtonClicked: boolean = false;
+
     constructor() {
         
     }
 
     ngOnInit() {
+        
+    }
 
+    closeMenu() {
+        this.closeButtonClicked = true;
+        this.onCloseButtonClicked.emit({close: this.closeButtonClicked});
     }
 }   

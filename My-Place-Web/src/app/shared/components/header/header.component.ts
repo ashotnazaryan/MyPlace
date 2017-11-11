@@ -10,7 +10,7 @@ import { Component, ViewEncapsulation, OnInit, EventEmitter, Output } from '@ang
 export class HeaderComponent implements OnInit {
 
     @Output() onLanguageChanged: EventEmitter<any> = new EventEmitter();
-    @Output() onMenuButtonClicked: EventEmitter<any> = new EventEmitter();
+    @Output() onOpenButtonClicked: EventEmitter<any> = new EventEmitter();
 
     themes: any[] = [
         { key: 'en-theme', value: 'EN' },
@@ -18,14 +18,14 @@ export class HeaderComponent implements OnInit {
         { key: 'am-theme', value: 'AM' }
     ];
     selectedTheme: any = this.themes[0];
-    menuButtonClicked: boolean = false;
+    openButtonClicked: boolean = false;
 
     constructor() {
         
     }
 
     ngOnInit() {
-
+        
     }
 
     changeTheme(theme) {
@@ -33,9 +33,9 @@ export class HeaderComponent implements OnInit {
         this.onLanguageChanged.emit(this.selectedTheme);
     }
 
-    openLeftMenu() {
-        this.menuButtonClicked = !this.menuButtonClicked;
-        this.onMenuButtonClicked.emit(this.menuButtonClicked);
+    openMenu() {
+        this.openButtonClicked = true;
+        this.onOpenButtonClicked.emit({open: this.openButtonClicked});
     }
 
 }   

@@ -1,6 +1,8 @@
 <div class="app-container" [ngClass]="{'en-theme': selectedTheme?.key === 'en-theme', 'ua-theme': selectedTheme?.key === 'ua-theme', 'am-theme': selectedTheme?.key === 'am-theme'}">
-    <header (onLanguageChanged)="languageChangeHandler($event)" (onMenuButtonClicked)="menuButtonClickHandler($event)"></header>
-    <left-menu *ngIf="menuButtonClicked"></left-menu>
-    <content></content>
-    <footer></footer>
+    <left-menu *ngIf="showLeftMenu" (onCloseButtonClicked)="closeLeftMenu($event)"></left-menu>
+    <div class="main-container" [ngClass]="{'opacity': showLeftMenu}">
+        <header (onLanguageChanged)="changeLanguage($event)" (onOpenButtonClicked)="openLeftMenu($event)"></header>
+        <content></content>
+        <footer></footer>
+    </div>
 </div>

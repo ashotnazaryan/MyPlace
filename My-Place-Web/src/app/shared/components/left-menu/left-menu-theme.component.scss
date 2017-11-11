@@ -1,6 +1,6 @@
 @import '~@angular/material/theming';
 
-@mixin header-theme-component($theme) {
+@mixin left-menu-theme-component($theme) {
 
     $primary: map-get($theme, primary);
     $accent: map-get($theme, accent);
@@ -8,9 +8,9 @@
     $background: map-get($theme, background);
     $foreground: map-get($theme, foreground);
 
-    header {
-        box-shadow: 1px 1px 3px mat-color($primary);
-        .header-container {
+    left-menu {
+        box-shadow: 1px 0px 2px mat-color($primary, A400);
+        .left-menu-container {
             
         }
     }
