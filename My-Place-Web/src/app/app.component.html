@@ -1,9 +1,13 @@
 <div class="app-container" [ngClass]="{'en-theme': selectedTheme?.key === 'en-theme', 
     'ua-theme': selectedTheme?.key === 'ua-theme', 'am-theme': selectedTheme?.key === 'am-theme'}">
-    <left-menu id="leftmenu" *ngIf="showLeftMenu" [@leftMenuAnimation]="showLeftMenu" (onCloseButtonClicked)="closeLeftMenu($event)"></left-menu>
-    <div class="main-container" [ngClass]="{'opacity': showLeftMenu}">
-        <header (onLanguageChanged)="changeLanguage($event)" (onOpenButtonClicked)="openLeftMenu($event)"></header>
-        <content></content>
-        <footer></footer>
-    </div>
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav>
+            <left-menu (onCloseButtonClicked)="closeLeftMenu($event)"></left-menu>
+        </mat-sidenav>
+        <div class="main-container">
+            <header (onLanguageChanged)="changeLanguage($event)" (onOpenButtonClicked)="openLeftMenu($event)"></header>
+            <content></content>
+            <footer></footer>
+        </div>
+    </mat-sidenav-container>
 </div>

@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit, trigger, transition, style, animate, state } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, trigger, transition, style, animate, state, ViewChild } from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';  //if import from 'rxjs' than more 2.7 MB in vendor.js
@@ -8,32 +8,14 @@ import { Subject } from 'rxjs/Subject';  //if import from 'rxjs' than more 2.7 M
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations: [
-        trigger(
-            'leftMenuAnimation',
-            [
-                transition(
-                    ':enter', [
-                        style({ transform: 'translateX(-100%)', opacity: 0 }),
-                        animate('500ms', style({ transform: 'translateX(0)', opacity: 1 }))
-                    ]
-                ),
-                transition(
-                    ':leave', [
-                        style({ transform: 'translateX(0)', 'opacity': 1 }),
-                        animate('500ms', style({ transform: 'translateX(-100%)', opacity: 0 })),
-                    ]
-                )
-            ]
-        )
-    ],
 })
 
 export class AppComponent implements OnInit {
 
+    @ViewChild('sidenav') sidenav: any;
+
     selectedTheme: any = { key: 'en-theme', value: 'EN' };
     languageChangedEvent: Observable<any>;
-    showLeftMenu: boolean = false;
     private languageSubject = new Subject();
 
     constructor(private overlayContainer: OverlayContainer) {
@@ -60,13 +42,14 @@ export class AppComponent implements OnInit {
     }
 
     openLeftMenu(event) {
-        if (event.open)
-            this.showLeftMenu = true;
+        if (event.open) {
+            this.sidenav.open();
+        }            
     }
 
     closeLeftMenu(event) {
         if (event.close) {
-            this.showLeftMenu = false;
+            this.sidenav.close();
         }
     }
 

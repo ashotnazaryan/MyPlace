@@ -11,6 +11,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import 'hammerjs';
 
@@ -32,7 +33,7 @@ import { ContentComponent } from './shared/components/content/content.component'
         BrowserModule,
         BrowserAnimationsModule,
         MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatRadioModule, MatSelectModule,
-        MatFormFieldModule, MatInputModule
+        MatFormFieldModule, MatInputModule, MatSidenavModule
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, Output, EventEmitter, Input, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'left-menu',
@@ -18,7 +18,7 @@ export class LeftMenuComponent implements OnInit {
     }
 
     ngOnInit() {
-        
+
     }
 
     closeMenu() {

@@ -7,15 +7,14 @@ app-root {
     height: 100%;
     .app-container {
         height: 100%;
-        .main-container {
+        .mat-sidenav-container {
             height: 100%;
-            display: flex;
-            flex-flow: column;
-            &.opacity {
-                opacity: 0.4;
-                pointer-events: none;
+            .main-container {
+                height: 100%;
+                display: flex;
+                flex-flow: column;
             }
-        }
+        }        
     }    
 }
 
