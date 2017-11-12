@@ -15,13 +15,13 @@ import { Subject } from 'rxjs/Subject';  //if import from 'rxjs' than more 2.7 M
                 transition(
                     ':enter', [
                         style({ transform: 'translateX(-100%)', opacity: 0 }),
-                        animate('700ms', style({ transform: 'translateX(0)', opacity: 1 }))
+                        animate('500ms', style({ transform: 'translateX(0)', opacity: 1 }))
                     ]
                 ),
                 transition(
                     ':leave', [
                         style({ transform: 'translateX(0)', 'opacity': 1 }),
-                        animate('700ms', style({ transform: 'translateX(-100%)', opacity: 0 })),         
+                        animate('500ms', style({ transform: 'translateX(-100%)', opacity: 0 })),
                     ]
                 )
             ]
@@ -65,8 +65,9 @@ export class AppComponent implements OnInit {
     }
 
     closeLeftMenu(event) {
-        if (event.close)
+        if (event.close) {
             this.showLeftMenu = false;
+        }
     }
 
 }   
