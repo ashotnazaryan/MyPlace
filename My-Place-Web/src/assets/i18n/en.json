@@ -1,0 +1,38 @@
+{
+    "Common": {
+        "home": "Home"
+    },
+    "Header": {
+        "menu": "Menu",
+        "about": "About",
+        "empty": "Empty"
+    },
+    "Navmenu": {
+        "nouser": "Anonym User",
+        "noemail": "Email not found",
+        "nolocation": "Location not found",
+        "noinformation": "No detailed information"
+    },
+    "Footer": {
+        "ashotnazaryan": "Ashot Nazaryan"
+    },
+    "About": {
+        "about": "About"
+    },
+    "User": {
+        "login": "Login",
+        "loginVia": "Login Via",
+        "logout": "Logout",
+        "register": "Register",
+        "username": "Username",
+        "email": "Email",
+        "password": "Password",
+        "confirmpassword": "Confirm Password",
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "cancel": "Cancel",
+        "forgot": "Forgot Password ?",
+        "signup": "Sign Up",
+        "profile": "Profile"
+    }
+}

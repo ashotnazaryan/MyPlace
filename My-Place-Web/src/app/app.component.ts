@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation, OnInit, trigger, transition, style, anima
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';  //if import from 'rxjs' than more 2.7 MB in vendor.js
+import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-root',
@@ -18,7 +19,10 @@ export class AppComponent implements OnInit {
     languageChangedEvent: Observable<any>;
     private languageSubject = new Subject();
 
-    constructor(private overlayContainer: OverlayContainer) {
+    constructor(private overlayContainer: OverlayContainer, translate: TranslateService) {
+
+        translate.setDefaultLang('en');
+        translate.use('en');
 
         let classList: any = overlayContainer.getContainerElement().classList;
         classList.add(this.selectedTheme.key);

@@ -24,8 +24,8 @@
             <span>{{selectedTheme.value}}</span>
         </button>
         <mat-menu #languagemenu="matMenu" class="language-menu" [overlapTrigger]="false">
-            <button mat-menu-item *ngFor="let theme of themes" (click)="changeTheme(theme)">
-                <span>{{ theme?.value }}</span>
+            <button mat-menu-item *ngFor="let language of languages" (click)="changeLanguage(language)">
+                <span>{{ language?.value }}</span>
             </button>
         </mat-menu>
     </div>
