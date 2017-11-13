@@ -1,5 +1,5 @@
-<div class="app-container" [ngClass]="{'en-theme': selectedTheme?.key === 'en-theme', 
-    'ua-theme': selectedTheme?.key === 'ua-theme', 'am-theme': selectedTheme?.key === 'am-theme'}">
+<div class="app-container" [ngClass]="{'en': currentLanguage?.key === 'en', 
+    'ua': currentLanguage?.key === 'ua', 'am': currentLanguage?.key === 'am'}">
     <mat-sidenav-container>
         <mat-sidenav #sidenav>
             <left-menu (onCloseButtonClicked)="closeLeftMenu($event)"></left-menu>

@@ -4,9 +4,9 @@
 
 @include mat-core();
 
-@import './assets/style/themes/en-theme.scss';
-@import './assets/style/themes/ua-theme.scss';
-@import './assets/style/themes/am-theme.scss';
+@import './assets/style/themes/en.scss';
+@import './assets/style/themes/ua.scss';
+@import './assets/style/themes/am.scss';
 
 @import './app/app-theme.component.scss'; 
 @import './app/shared/components/left-menu/left-menu-theme.component.scss';
@@ -27,18 +27,18 @@
     @include footer-theme-component($theme);    
 }
 
-@include angular-material-theme($en-theme);  //for angular material core theme
-.en-theme {
-    @include angular-material-theme($en-theme);
-    @include custom-theme($en-theme);
+@include angular-material-theme($en);  //for angular material core theme
+.en {
+    @include angular-material-theme($en);
+    @include custom-theme($en);
 }
-.ua-theme {
-    @include angular-material-theme($ua-theme);
-    @include custom-theme($ua-theme);
+.ua {
+    @include angular-material-theme($ua);
+    @include custom-theme($ua);
 }
-.am-theme {
-    @include angular-material-theme($am-theme);
-    @include custom-theme($am-theme);
+.am {
+    @include angular-material-theme($am);
+    @include custom-theme($am);
 }
 
 

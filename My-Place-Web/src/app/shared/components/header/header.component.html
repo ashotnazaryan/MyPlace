@@ -21,7 +21,7 @@
     <div class="language">
         <button mat-icon-button color="primary" [matMenuTriggerFor]="languagemenu">
             <mat-icon>language</mat-icon>
-            <span>{{selectedTheme.value}}</span>
+            <span>{{currentLanguage?.value}}</span>
         </button>
         <mat-menu #languagemenu="matMenu" class="language-menu" [overlapTrigger]="false">
             <button mat-menu-item *ngFor="let language of languages" (click)="changeLanguage(language)">

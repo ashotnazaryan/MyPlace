@@ -15,23 +15,18 @@ export class HeaderComponent implements OnInit {
     @Output() onLanguageChanged: EventEmitter<any> = new EventEmitter();
     @Output() onOpenButtonClicked: EventEmitter<any> = new EventEmitter();
 
-    currentLanguage: string;
+    currentLanguage: any = {};
     translate: TranslateService;
     languages: any[] = [
-        { key: 'en-theme', value: 'en' },
-        { key: 'ua-theme', value: 'ua' },
-        { key: 'am-theme', value: 'am' }
+        { key: 'en', value: 'En' },
+        { key: 'ua', value: 'Uk' },
+        { key: 'am', value: 'Hy' }
     ];
-    selectedTheme: any = this.languages[0];
     openButtonClicked: boolean = false;
 
     constructor(translate: TranslateService, private languageService: LanguageService) {
         this.translate = translate;
-        this.currentLanguage = this.languageService.getCurrentLanguage(translate.currentLang);
-
-        translate.onLangChange.subscribe((event: LangChangeEvent) => {
-            this.currentLanguage = this.languageService.getCurrentLanguage(translate.currentLang);
-        });
+        this.currentLanguage = this.languages.find(item => item.key === translate.currentLang )
     }
 
     ngOnInit() {
@@ -39,9 +34,9 @@ export class HeaderComponent implements OnInit {
     }
 
     changeLanguage(language) {
-        this.selectedTheme = this.languages.find(item => item.value === language.value );
-        this.onLanguageChanged.emit(this.selectedTheme);
-        this.translate.use(language.value);
+        this.translate.use(language.key);
+        this.currentLanguage = this.languageService.getCurrentLanguage(language);
+        this.onLanguageChanged.emit(language);
     }
 
     openMenu() {

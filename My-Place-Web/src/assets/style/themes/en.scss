@@ -1,0 +1,7 @@
+
+$en-primary: mat-palette($mat-blue, 900);
+$en-accent: mat-palette($mat-red, A700); 
+$en-warn: mat-palette($mat-orange, 500);
+
+$en: mat-light-theme($en-primary, $en-accent, $en-warn);
+

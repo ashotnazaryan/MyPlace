@@ -1,0 +1,7 @@
+
+$ua-primary: mat-palette($mat-yellow, 700);
+$ua-accent: mat-palette($mat-blue, 500);
+$ua-warn: mat-palette($mat-orange, 500);
+
+$ua: mat-light-theme($ua-primary, $ua-accent, $ua-warn);
+

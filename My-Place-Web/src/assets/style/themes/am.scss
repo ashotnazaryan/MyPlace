@@ -1,0 +1,8 @@
+
+$am-primary: mat-palette($mat-red, A700);
+$am-accent: mat-palette($mat-blue, 900);
+$am-warn: mat-palette($mat-orange, 500);
+
+$am: mat-light-theme($am-primary, $am-accent, $am-warn);
+
+

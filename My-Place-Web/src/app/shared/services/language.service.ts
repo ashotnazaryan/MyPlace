@@ -4,14 +4,14 @@ import { Injectable } from '@angular/core';
 
 export class LanguageService {
 
-    getCurrentLanguage(lang: string){
-        switch(lang){
+    getCurrentLanguage(lang: any){
+        switch(lang.key){
             case 'en':
-                return 'en';
+                return {key: 'en', value: 'En'};
             case 'ua':
-                return 'ua';
+                return {key: 'ua', value: 'Uk'};
             case 'am':
-                return 'am';
+                return {key: 'am', value: 'Hy'};
             default:
                 throw 'Unsupported Language';
         }

@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
     @ViewChild('sidenav') sidenav: any;
 
-    selectedTheme: any = { key: 'en-theme', value: 'EN' };
+    currentLanguage: any = { key: 'en', value: 'EN' };
     languageChangedEvent: Observable<any>;
     private languageSubject = new Subject();
 
@@ -25,14 +25,14 @@ export class AppComponent implements OnInit {
         translate.use('en');
 
         let classList: any = overlayContainer.getContainerElement().classList;
-        classList.add(this.selectedTheme.key);
+        classList.add(this.currentLanguage.key);
 
         this.languageChangedEvent = this.languageSubject.asObservable();
 
         this.languageChangedEvent.subscribe((event) => {
             classList.add(event.key);
-            classList.remove(this.selectedTheme.key);
-            this.selectedTheme = event;
+            classList.remove(this.currentLanguage.key);
+            this.currentLanguage = event;
         });
 
     }
@@ -46,15 +46,13 @@ export class AppComponent implements OnInit {
     }
 
     openLeftMenu(event) {
-        if (event.open) {
-            this.sidenav.open();
-        }            
+        if (event.open)
+            this.sidenav.open();         
     }
 
     closeLeftMenu(event) {
-        if (event.close) {
+        if (event.close)
             this.sidenav.close();
-        }
     }
 
 }   
