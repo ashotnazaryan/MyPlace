@@ -18,9 +18,9 @@ export class HeaderComponent implements OnInit {
     currentLanguage: any = {};
     translate: TranslateService;
     languages: any[] = [
-        { key: 'en', value: 'En' },
-        { key: 'ua', value: 'Uk' },
-        { key: 'am', value: 'Hy' }
+        { key: 'en', value: 'En', flag: 'flag-gb' },
+        { key: 'ua', value: 'Uk', flag: 'flag-ua' },
+        { key: 'am', value: 'Hy', flag: 'flag-am' }
     ];
     openButtonClicked: boolean = false;
 

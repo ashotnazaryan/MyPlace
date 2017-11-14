@@ -1,5 +1,5 @@
 @import './assets/style/variables.scss';
-
+@import './assets/style/flags/flags.css';
 @import '~@angular/material/theming';
 
 @include mat-core();
@@ -47,7 +47,7 @@ html {
     body {
         background-color: $white;
         height: 100%;      
-    
+        
         .button-large {
             line-height: $btn-lg;
             padding: $btn-lg-pd;

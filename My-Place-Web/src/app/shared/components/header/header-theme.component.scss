@@ -10,8 +10,8 @@
 
     header {
         box-shadow: 0px 3px 4px mat-color($primary);
-        .header-container {
-            
+        .mat-button {
+            border: 1px solid mat-color($primary, 700);
         }
     }
 }

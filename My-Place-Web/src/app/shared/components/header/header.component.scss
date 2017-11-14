@@ -16,9 +16,6 @@ header {
             flex-grow: 1;
         }
         .language {
-            .mat-icon-button {
-                width: 50px;
-            }
         }
     }
 }
@@ -26,6 +23,10 @@ header {
 .language-menu.mat-menu-panel {
     min-width: 80px;
     .mat-menu-item {
-        text-align: center;
+        display: flex;
+        align-items: center;
+        .flag {
+            margin-right: 3px;
+        }
     }
 }

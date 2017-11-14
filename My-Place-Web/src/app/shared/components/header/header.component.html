@@ -20,11 +20,12 @@
     </div>
     <div class="language">
         <button mat-icon-button color="primary" [matMenuTriggerFor]="languagemenu">
-            <mat-icon>language</mat-icon>
-            <span>{{currentLanguage?.value}}</span>
+            <!-- <mat-icon>language</mat-icon> -->
+            <span class="flag {{currentLanguage?.flag}}"></span>
         </button>
         <mat-menu #languagemenu="matMenu" class="language-menu" [overlapTrigger]="false">
             <button mat-menu-item *ngFor="let language of languages" (click)="changeLanguage(language)">
+                <span class="flag {{language?.flag}}"></span>
                 <span>{{ language?.value }}</span>
             </button>
         </mat-menu>
